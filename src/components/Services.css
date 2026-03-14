@@ -1,0 +1,161 @@
+.services {
+     padding: 120px 0;
+     background: var(--bg);
+     position: relative;
+     overflow: hidden;
+}
+
+.services::before {
+     content: '';
+     position: absolute;
+     bottom: -100px;
+     left: -200px;
+     width: 600px;
+     height: 600px;
+     background: radial-gradient(circle, rgba(124, 58, 237, 0.06) 0%, transparent 70%);
+     pointer-events: none;
+}
+
+.section-header {
+     text-align: center;
+     margin-bottom: 64px;
+}
+
+.section-header .section-badge {
+     display: inline-block;
+}
+
+.section-header .section-subtitle {
+     margin: 16px auto 0;
+}
+
+.services-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 28px;
+}
+
+.service-card {
+     background: var(--bg-2);
+     border-radius: 20px;
+     overflow: hidden;
+     border: 1px solid rgba(255, 255, 255, 0.06);
+     transition: all 0.4s ease;
+     cursor: pointer;
+     position: relative;
+}
+
+.service-card:hover {
+     transform: translateY(-10px);
+     border-color: rgba(255, 255, 255, 0.12);
+     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.4);
+}
+
+.service-card:hover .card-glow {
+     opacity: 0.08;
+}
+
+.card-glow {
+     position: absolute;
+     inset: 0;
+     opacity: 0;
+     transition: opacity 0.4s ease;
+     pointer-events: none;
+     border-radius: 20px;
+}
+
+.card-img-wrap {
+     position: relative;
+     height: 200px;
+     overflow: hidden;
+}
+
+.card-img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform 0.6s ease;
+}
+
+.service-card:hover .card-img {
+     transform: scale(1.08);
+}
+
+.card-tag {
+     position: absolute;
+     top: 16px;
+     right: 16px;
+     color: var(--text);
+     font-size: 0.7rem;
+     font-weight: 700;
+     padding: 4px 12px;
+     border-radius: 50px;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+}
+
+.card-icon-wrap {
+     position: absolute;
+     bottom: -20px;
+     left: 20px;
+     width: 48px;
+     height: 48px;
+     border-radius: 12px;
+     background: var(--bg-2);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 2px solid rgba(255, 255, 255, 0.08);
+     z-index: 1;
+}
+
+.card-icon {
+     font-size: 1.5rem;
+}
+
+.card-body {
+     padding: 36px 20px 24px;
+}
+
+.card-title {
+     font-family: 'Playfair Display', serif;
+     font-size: 1.15rem;
+     font-weight: 700;
+     color: var(--text);
+     margin-bottom: 10px;
+}
+
+.card-desc {
+     font-size: 0.82rem;
+     color: var(--text-muted);
+     line-height: 1.7;
+     margin-bottom: 16px;
+}
+
+.card-action {
+     border-top: 1px solid rgba(255, 255, 255, 0.06);
+     padding-top: 16px;
+}
+
+.card-link {
+     font-size: 0.82rem;
+     font-weight: 600;
+     letter-spacing: 0.3px;
+     transition: letter-spacing 0.3s;
+}
+
+.service-card:hover .card-link {
+     letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+     .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+@media (max-width: 600px) {
+     .services-grid {
+          grid-template-columns: 1fr;
+     }
+}
