@@ -2,14 +2,15 @@ import { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Gallery.css';
+import { assetPath } from '../utils/assetPath';
 
 const galleryItems = [
-     { src: '/images/hero.png', title: 'Wedding Celebration', loc: 'Yas Island', size: 'large' },
-     { src: '/images/corporate.png', title: 'Corporate Gala', loc: 'Etihad Towers', size: 'small' },
-     { src: '/images/birthday.png', title: 'Birthday Bash', loc: 'Saadiyat Beach Club', size: 'small' },
-     { src: '/images/engagement.png', title: 'Engagement Party', loc: 'Al Raha Beach', size: 'medium' },
-     { src: '/images/graduation.png', title: 'Graduation Event', loc: 'Khalifa University', size: 'medium' },
-     { src: '/images/gallery.png', title: 'Photo Memories', loc: 'Abu Dhabi', size: 'large' },
+     { src: assetPath('images/hero.png'), title: 'Wedding Celebration', loc: 'Yas Island', size: 'large' },
+     { src: assetPath('images/corporate.png'), title: 'Corporate Gala', loc: 'Etihad Towers', size: 'small' },
+     { src: assetPath('images/birthday.png'), title: 'Birthday Bash', loc: 'Saadiyat Beach Club', size: 'small' },
+     { src: assetPath('images/engagement.png'), title: 'Engagement Party', loc: 'Al Raha Beach', size: 'medium' },
+     { src: assetPath('images/graduation.png'), title: 'Graduation Event', loc: 'Khalifa University', size: 'medium' },
+     { src: assetPath('images/gallery.png'), title: 'Photo Memories', loc: 'Abu Dhabi', size: 'large' },
 ];
 
 export default function Gallery() {

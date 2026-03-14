@@ -1,13 +1,14 @@
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import './Services.css';
+import { assetPath } from '../utils/assetPath';
 
 const services = [
      {
           icon: '💍',
           title: 'Wedding Celebrations',
           desc: 'Make your special day unforgettable with our luxury wedding photo booth experience. Custom templates, premium backdrops, and instant keepsakes.',
-          img: '/images/hero.png',
+          img: assetPath('images/hero.png'),
           tag: 'Most Popular',
           color: '#e8547a',
      },
@@ -15,7 +16,7 @@ const services = [
           icon: '🏢',
           title: 'Corporate Events',
           desc: 'Elevate your brand activation, product launch, or company gala with fully branded, professional booth experiences.',
-          img: '/images/corporate.png',
+          img: assetPath('images/corporate.png'),
           tag: 'Branded',
           color: '#0891b2',
      },
@@ -23,7 +24,7 @@ const services = [
           icon: '🎂',
           title: 'Birthday Parties',
           desc: "Celebrate life's milestones with vibrant, fun-filled photobooth experiences the whole family will love.",
-          img: '/images/birthday.png',
+          img: assetPath('images/birthday.png'),
           tag: 'Fun!',
           color: '#f59e0b',
      },
@@ -31,7 +32,7 @@ const services = [
           icon: '🎓',
           title: 'Graduation Events',
           desc: 'Capture those proud graduation moments with a setup that matches the magnitude of the achievement.',
-          img: '/images/graduation.png',
+          img: assetPath('images/graduation.png'),
           tag: 'Celebratory',
           color: '#7c3aed',
      },
@@ -39,7 +40,7 @@ const services = [
           icon: '💑',
           title: 'Engagements',
           desc: 'Romance and elegance combined. Create dreamy, beautiful memories for your engagement celebration.',
-          img: '/images/engagement.png',
+          img: assetPath('images/engagement.png'),
           tag: 'Romantic',
           color: '#ec4899',
      },
@@ -47,7 +48,7 @@ const services = [
           icon: '🎊',
           title: 'Cultural Festivities',
           desc: 'From Eid celebrations to cultural galas, our booth supports Arabic & English and adapts to any cultural event.',
-          img: '/images/hero.png',
+          img: assetPath('images/hero.png'),
           tag: 'Bilingual',
           color: '#22c55e',
      },

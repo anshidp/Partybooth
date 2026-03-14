@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import './About.css';
+import { assetPath } from '../utils/assetPath';
 
 const features = [
      { icon: '⚡', title: 'Instant Prints', desc: 'Photo prints in under 5 seconds with lab-quality results every time.' },
@@ -26,13 +27,13 @@ export default function About() {
                               transition={{ duration: 0.8, ease: 'easeOut' }}
                          >
                               <div className="viz-main">
-                                   <img src="/images/hero.png" alt="Wedding photo booth" />
+                                   <img src={assetPath('images/hero.png')} alt="Wedding photo booth" />
                                    <div className="viz-overlay">
                                         <span className="viz-tag">✨ Premium Experience</span>
                                    </div>
                               </div>
                               <div className="viz-secondary">
-                                   <img src="/images/corporate.png" alt="Corporate event" />
+                                   <img src={assetPath('images/corporate.png')} alt="Corporate event" />
                               </div>
                               <div className="viz-badge">
                                    <span className="viz-badge-num primary-text">500+</span>

@@ -1,12 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import './Hero.css';
+import { assetPath } from '../utils/assetPath';
 
 const floatingImages = [
-     { src: '/images/hero.png', className: 'fi fi-1', delay: 0 },
-     { src: '/images/corporate.png', className: 'fi fi-2', delay: 0.3 },
-     // { src: '/images/birthday.png', className: 'fi fi-3', delay: 0.6 },
-     { src: '/images/graduation.png', className: 'fi fi-4', delay: 0.9 },
+     { src: assetPath('images/hero.png'), className: 'fi fi-1', delay: 0 },
+     { src: assetPath('images/corporate.png'), className: 'fi fi-2', delay: 0.3 },
+     // { src: assetPath('images/birthday.png'), className: 'fi fi-3', delay: 0.6 },
+     { src: assetPath('images/graduation.png'), className: 'fi fi-4', delay: 0.9 },
 ];
 
 const stats = [
